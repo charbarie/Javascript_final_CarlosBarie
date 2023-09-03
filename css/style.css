@@ -1,0 +1,66 @@
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 2.1fr 0.4fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "Header Header Header" "main main main" "footer footer footer";
+  background-color: black; }
+
+.header {
+  grid-area: Header;
+  align-items: end; }
+  .header nav {
+    background-color: black;
+    color: white; }
+    .header nav form {
+      padding: 4px;
+      margin: 5px;
+      justify-content: center; }
+      .header nav form mb-3 {
+        margin: 3px; }
+
+main {
+  width: 100%;
+  grid-area: main;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 100px;
+  padding-top: 5%;
+  border-radius: 20%; }
+  main .pantalla {
+    background-color: red;
+    border-radius: 1%;
+    width: 100%;
+    color: white; }
+  main .izquierda {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20%; }
+    main .izquierda button {
+      width: auto;
+      border-radius: 3%; }
+  main .derecha {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20%; }
+    main .derecha button {
+      width: auto;
+      border-radius: 3%; }
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-size-adjust: 20px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: red;
+  text-align: center; }

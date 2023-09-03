@@ -1,0 +1,38 @@
+main{ 
+        width: 100%;
+        grid-area: main;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        padding: 100px;
+        padding-top: 5%;
+        border-radius: 20%;
+        .pantalla{
+            background-color: red;
+            border-radius: 1%;
+            width: 100%;
+            color: white;
+        }
+        .izquierda{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-radius: 20%;
+            button{
+                width: auto;
+                border-radius: 3%;
+            }
+        }
+        .derecha{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-radius: 20%;
+            button{
+                width: auto;
+                border-radius: 3%;
+            }
+        }
+        
+}
