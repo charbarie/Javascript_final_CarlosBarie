@@ -4,7 +4,9 @@ body {
   grid-template-rows: 0.5fr 2.1fr 0.4fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "Header Header Header" "main main main" "footer footer footer";
+  grid-template-areas: "Header Header Header"
+ "main main main"
+ "footer footer footer";
   background-color: black; }
 
 .header {
@@ -21,6 +23,8 @@ body {
         margin: 3px; }
 
 main {
+  background-color: aliceblue;
+  color: black;
   width: 100%;
   grid-area: main;
   display: flex;
@@ -29,27 +33,31 @@ main {
   padding: 100px;
   padding-top: 5%;
   border-radius: 20%; }
-  main .pantalla {
-    background-color: red;
-    border-radius: 1%;
-    width: 100%;
-    color: white; }
-  main .izquierda {
+  main MenuPrincipal {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 20%; }
-    main .izquierda button {
-      width: auto;
-      border-radius: 3%; }
-  main .derecha {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 20%; }
-    main .derecha button {
-      width: auto;
-      border-radius: 3%; }
+    flex-direction: row;
+    justify-content: space-between; }
+    main MenuPrincipal .izquierda {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 20%; }
+      main MenuPrincipal .izquierda button {
+        width: auto;
+        border-radius: 3%; }
+    main MenuPrincipal .pantalla {
+      background-color: red;
+      border-radius: 1%;
+      width: 100%;
+      color: white; }
+    main MenuPrincipal .derecha {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 20%; }
+      main MenuPrincipal .derecha button {
+        width: auto;
+        border-radius: 3%; }
 
 .footer {
   grid-area: footer;

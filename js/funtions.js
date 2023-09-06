@@ -1,35 +1,4 @@
 
-ActiveUSer = false;
-
-document.getElementById("guardarLogin").addEventListener("click", guardado)
-function guardado(){
-    /* et user = "coder";let pass = 1234; */
-    let user = document.getElementById("user").value;
-    let pass = Number(document.getElementById("password").value); 
-    console.log("Credenciales guardadas con éxito.");
-    ActiveUSer = login(user,pass);
-    console.log(ActiveUSer);
-    console.log("---------------------------------------------");
-    if(ActiveUSer == true){
-        showMenu();
-    };
-function login(a,b){
-    for( const item of Usuarios){
-        if(item.user == a && item.password == b){ 
-            const UsuarioEnLocal = JSON.stringify(item);
-            localStorage.setItem("item",UsuarioEnLocal);
-            console.log("-------------UsuarioEnLocal -----------------------");
-            console.log(UsuarioEnLocal);
-            const UsuarioDesdeLocal = JSON.parse(UsuarioEnLocal);   
-            console.log("-------------UsuarioDesdeLocal -----------------------");
-            return true;
-        };
-    };
-};
-    
-
-};
-
 
  
 

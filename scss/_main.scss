@@ -8,12 +8,12 @@ main{
         padding: 100px;
         padding-top: 5%;
         border-radius: 20%;
-        .pantalla{
-            background-color: red;
-            border-radius: 1%;
-            width: 100%;
-            color: white;
-        }
+        MenuPrincipal{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+    
+        
         .izquierda{
             display: flex;
             flex-direction: column;
@@ -24,6 +24,13 @@ main{
                 border-radius: 3%;
             }
         }
+        .pantalla{
+            background-color: red;
+            border-radius: 1%;
+            width: 100%;
+            color: white;
+        }
+        
         .derecha{
             display: flex;
             flex-direction: column;
@@ -35,4 +42,4 @@ main{
             }
         }
         
-}
+}}
