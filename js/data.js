@@ -5,7 +5,7 @@
             date:"26/04/1986",
             user:"ryebread",
             password:3548,
-            accountPesos:497721,
+            accountPesos:500,
             accountDolares:1502,   
             access: true 
         },{
@@ -14,7 +14,7 @@
             date:"02/09/1999",
             user:"icestorm",
             password:6663,
-            accountPesos:393538,
+            accountPesos:3938,
             accountDolares:152,
             access: true 
         },{
@@ -23,7 +23,7 @@
             date:"26/01/1998",
             user:"lemonade",
             password:4882,
-            accountPesos:528540,
+            accountPesos:5280,
             accountDolares:620,
             access: true,
         },{
@@ -32,7 +32,7 @@
             date:"20/09/1984",
             user:"trombone",
             password:6949,
-            accountPesos:385939,
+            accountPesos:5939,
             accountDolares:1818,
             access: true,
         },{
@@ -41,7 +41,7 @@
             date:"27/07/1998",
             user:"MiaGattivalley",
             password:2256,
-            accountPesos:569935,
+            accountPesos:1695,
             accountDolares:818,
             access: true,
         },{
@@ -50,7 +50,7 @@
             date:"08/09/1984",
             user:"Azulpie",
             password:5523,
-            accountPesos:370169,
+            accountPesos:169,
             accountDolares:1146,
             access: true,
         },{
@@ -59,7 +59,7 @@
             date:"14/06/1984",
             user:"ambarrye",
             password:4223,
-            accountPesos:259562,
+            accountPesos:9562,
             accountDolares:1982,
             access: true,
         },{
@@ -68,7 +68,7 @@
             date:"12/02/1981",
             user:"steeldog",
             password:6345,
-            accountPesos:229050,
+            accountPesos:2900,
             accountDolares:1540,
             access: true,
         },{
@@ -77,7 +77,7 @@
             date:"16/09/2002",
             user:"squidnix",
             password:3932,
-            accountPesos:332894,
+            accountPesos:3894,
             accountDolares:156,
             access: true,
         },{
@@ -86,7 +86,7 @@
             date:"17/10/1978",
             user:"coder",
             password:1234,
-            accountPesos:418786,
+            accountPesos:4187,
             accountDolares:1984,
             access: true,
         }
