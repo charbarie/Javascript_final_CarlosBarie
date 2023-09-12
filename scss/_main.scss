@@ -1,45 +1,124 @@
-main{ 
-        width: 100%;
-        grid-area: main;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+.main {
+    grid-area: main;
+    display: flex;
+    justify-content: space-around;
 
-        padding: 100px;
-        padding-top: 5%;
-        border-radius: 20%;
-        MenuPrincipal{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-    
-        
-        .izquierda{
+  
+    .menuPrincipal {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      
+  
+      .boton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        height: 60px;
+        font-size: 18px;
+        background-color: #3498db;
+        color: #fff;
+        border: 2px solid #2980b9;
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+        margin: 2px;
+        max-width: 100%;
+      }
+  
+      .boton:hover {
+        background-color: #2980b9;
+        transform: translateY(-2px);
+      }
+  
+      .izquierda {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100px;
+        padding: 2px;
+        margin: 2px;
+      }
+  
+      .derecha {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100px;
+      }
+  
+      .pantalla {
+        padding: 10px;
+        background-color: rgb(64, 64, 152);
+        width: 800px;
+        height: 300px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #333;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 24px;
+        font-family: 'Arial', sans-serif;
+        line-height: 1.5;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        .formulario {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            border-radius: 20%;
-            button{
-                width: auto;
-                border-radius: 3%;
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        
+            label {
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+        
+            .input-container {
+                display: flex;
+                flex-direction: column;
+        
+                input[type="number"],
+                input[type="text"] {
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                }
+        
+                button[type="submit"] {
+                    padding: 10px;
+                    background-color: #3498db;
+                    color: #fff;
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 18px;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+        
+                    &:hover {
+                        background-color: #2980b9;
+                    }
+                }
             }
         }
-        .pantalla{
-            background-color: red;
-            border-radius: 1%;
-            width: 100%;
-            color: white;
-        }
         
-        .derecha{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            border-radius: 20%;
-            button{
-                width: auto;
-                border-radius: 3%;
-            }
-        }
         
-}}
+  
+      .pantalla resultado {
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+  

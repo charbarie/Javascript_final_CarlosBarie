@@ -5,11 +5,13 @@ body {
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "Header Header Header"
+    "header header header"
     "main main main"
     "footer footer footer";
-    background-color: black;
+
+    
 }
+
 
 
 
