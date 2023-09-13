@@ -4,18 +4,9 @@ const pantalla = document.getElementById("pantalla");
 let op = 0;
 
 
-function botoneraPrincipal() { // Mostrar la "Botonera Principal"
-    pantalla.innerHTML = `
-        <div>
-            <p>1-Saldos</p>
-            <p>2-Extracciones</p>
-            <p>3-Depósitos</p>
-            <p>4-Cambio de clave</p>
-            <p>5-Salir</p>
-        </div>`;
-};
 
-function eleccionMenu(x) { // Manejar las opciones del menú principal
+function eleccionMenu(x) { 
+    if(ActiveUser == true){// Manejar las opciones del menú principal si está logueado
     switch (x) {
         case "1":
             mostrarMensaje('Saldo en cuenta', '$' + objetoDesdeLocalStorage.accountPesos);
@@ -24,7 +15,6 @@ function eleccionMenu(x) { // Manejar las opciones del menú principal
         case "2":
             mostrarFormulario('debito', function (importe) {
                 objetoDesdeLocalStorage.accountPesos = extraccion(objetoDesdeLocalStorage.accountPesos, importe);
-                mostrarMensaje('Extracción realizada', `Extracción solicitada $${importe}, saldo actual: $${objetoDesdeLocalStorage.accountPesos}`);
                 botoneraPrincipal();
             });
             break;
@@ -32,21 +22,37 @@ function eleccionMenu(x) { // Manejar las opciones del menú principal
         case "3":
             mostrarFormulario('deposito', function (monto) {
                 objetoDesdeLocalStorage.accountPesos = deposit(objetoDesdeLocalStorage.accountPesos, monto);
-                mostrarMensaje('Depósito realizado', `Depósito de $${monto} Realizado, saldo actual: $${objetoDesdeLocalStorage.accountPesos}`);
                 botoneraPrincipal();
             });
             break;
 
         case "4":
-           /*  passwordReset(objetoDesdeLocalStorage.password); */
+           pantalla.innerHTML =  `
+           <form id="cambioClaveForm" style="display: none;">
+                <label for="nuevaClave">Nueva Contraseña:</label>
+                <input type="password" id="nuevaClave" required><br>
+            
+                <label for="confirmarClave">Confirmar Contraseña:</label>
+                <input type="password" id="confirmarClave" required><br>
+            
+                <button type="submit">Cambiar Contraseña</button>
+            </form>
+
+           `;
+           cambiarClave(objetoDesdeLocalStorage)
             break;
 
         default:
-            localStorage.removeItem("objetoDesdeLocalStorage"); 
+            localStorage.clear();
             pantalla.innerHTML = "Salió";
+            ActiveUser = false;
             break;
     }
+}else{
+    pantalla.innerHTML = "Favor de loguearse";
 };
+}
+
 
 botones.forEach(function (boton) { // Agregar un evento click a los botones "lo que me costó esta función no tiene nombre"
     boton.addEventListener('click', function () {
@@ -55,46 +61,6 @@ botones.forEach(function (boton) { // Agregar un evento click a los botones "lo 
     });
 });
 
-function extraccion(balance, extract) { // Realizar una extracción
-    balance = balance - extract;
-    return balance;
-};
-
-function deposit(balance, deposito) { // Realizar un depósito
-    balance = Number(balance) + Number(deposito);
-    return balance;
-};
-
-function mostrarMensaje(titulo, mensaje) { // Mostrar un mensaje utilizando la librería Swal
-    Swal.fire({
-        title: titulo,
-        text: mensaje,
-        confirmButtonText: 'Volver'
-    });
-};
-
-function mostrarFormulario(tipo, retorno) { // Mostrar un formulario y gestionar su envío
-    pantalla.innerHTML = `
-        <form class="formulario ${tipo}">
-            <label for="importe">Importe:</label>
-            <div class="input-container">
-                <input id="importe" type="text" name="importe" placeholder="Ingrese el importe" required>
-                <button type="submit">${tipo === 'debito' ? 'Extraer' : 'Depositar'}</button>
-            </div>
-        </form>`;
-
-    const formulario = document.querySelector(`.${tipo}`);
-
-    formulario.addEventListener('submit', function (event) {
-        event.preventDefault();
-        let importe = Number(document.getElementById("importe").value);
-        if (!isNaN(importe)) {
-            retorno(importe);
-        } else {
-            mostrarMensaje("error","Por favor, ingrese un valor válido.");
-        };
-    });
-};
 
 
 

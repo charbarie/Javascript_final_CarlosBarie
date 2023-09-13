@@ -113,7 +113,7 @@ body {
         font-weight: bold;
         margin-top: 10px; }
 
-.footer {
+bg-dark {
   grid-area: footer;
   display: grid;
   flex-direction: row;

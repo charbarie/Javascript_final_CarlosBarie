@@ -30,7 +30,4 @@ function login(a,b){ //Verifica las credenciales de inicio de sesión
 
 let objetoDesdeLocalStorage = JSON.parse(localStorage.getItem("item"));// Obtener el objeto de usuario desde el almacenamiento local
 
-function cl(a){// Función de utilidad para imprimir un valor en la consola solo para pruebas
-    console.log(a);
-    console.log(typeof (a));
-}
+
