@@ -13,15 +13,20 @@ function eleccionMenu(x) {
             break;
 
         case "2":
+            cl("entro caso dos")
             mostrarFormulario('debito', function (importe) {
+               
                 objetoDesdeLocalStorage.accountPesos = extraccion(objetoDesdeLocalStorage.accountPesos, importe);
+                
                 botoneraPrincipal();
             });
             break;
 
         case "3":
+            cl("entro caso mostrar")
             mostrarFormulario('deposito', function (monto) {
                 objetoDesdeLocalStorage.accountPesos = deposit(objetoDesdeLocalStorage.accountPesos, monto);
+                cl("salio caso tres")
                 botoneraPrincipal();
             });
             break;

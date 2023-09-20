@@ -2,20 +2,25 @@
 
 function extraccion(saldo, extraccion) { 
     if(saldo > extraccion){
-        saldo = saldo - extraccion;
+        saldo -=  extraccion;
         mostrarMensaje('Extracción realizada', `Extracción solicitada $${extraccion}, saldo actual: $${saldo}`);
-        return saldo;
-     }else{
+       
+    }else{
         mostrarMensaje("Error","No posee el saldo suficiente");
     }   
     return saldo;
 
 };
 
-function deposit(saldo, ingreso) {
-    if(ingreso){ // Realizar un depósito
-        saldo = Number(saldo) + Number(ingreso);
-    return balance;
+function deposit(saldo, ingreso) {// Realizar un depósito
+    if(ingreso){ 
+        saldo = saldo + Number(ingreso);
+        mostrarMensaje('Deposito Realizado', `deposito ingresado $${ingreso}, saldo actual: $${saldo}`);
+    }else{
+        mostrarMensaje("Error","No posee el saldo suficiente");
+    }   
+    return saldo;
+
 };
 
 function mostrarMensaje(titulo, mensaje) { // Mostrar un mensaje utilizando la librería 
@@ -62,5 +67,6 @@ function botoneraPrincipal() { // Mostrar las "opciones Principales"
 function cl(a){// Función de utilidad para imprimir un valor en la consola solo para pruebas
     console.log(a);
     console.log(typeof (a));
-}
-}
+};
+
+
